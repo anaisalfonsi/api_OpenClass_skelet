@@ -11,6 +11,7 @@
         "doctrine/doctrine-bundle": "^2.4",
         "doctrine/doctrine-migrations-bundle": "^3.1",
         "doctrine/orm": "^2.9",
+        "friendsofsymfony/rest-bundle": "^3.0",
         "jms/serializer-bundle": "^3.9",
         "sensio/framework-extra-bundle": "^6.1",
         "symfony/console": "5.3.*",
@@ -20,7 +21,6 @@
         "symfony/property-access": "5.3.*",
         "symfony/proxy-manager-bridge": "5.3.*",
         "symfony/runtime": "5.3.*",
-        "symfony/serializer": "5.3.*",
         "symfony/yaml": "5.3.*"
     },
     "config": {
