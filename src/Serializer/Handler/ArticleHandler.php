@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Serializer\Handler;
+/*namespace App\Serializer\Handler;
 
 use App\Entity\Article;
 use JMS\Serializer\Context;
@@ -46,4 +46,4 @@ class ArticleHandler implements SubscribingHandlerInterface
         return new Article($data);
     }
 
-}
+}*/

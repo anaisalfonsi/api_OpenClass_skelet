@@ -28,7 +28,7 @@ class Article
     private $content;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Author::class, inversedBy="articles")
+     * @ORM\ManyToOne(targetEntity=Author::class, inversedBy="articles", cascade={"all"}, fetch="EAGER")
      */
     private $author;
 

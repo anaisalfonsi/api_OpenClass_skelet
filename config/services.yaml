@@ -27,7 +27,10 @@ services:
         #class: App\Serializer\Listener\ArticleListener
         #tags:
       #      - { name: jms_serializer.event_subscriber }
-    serializer_handler.article:
-        class: App\Serializer\Handler\ArticleHandler
-        tags:
-            - { name: jms_serializer.subscribing_handler }
+    #serializer_handler.article:
+        #class: App\Serializer\Handler\ArticleHandler
+        #tags:
+          #  - { name: jms_serializer.subscribing_handler }
+
+    sensio_framework_extra.view.listener:
+        alias: Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener
