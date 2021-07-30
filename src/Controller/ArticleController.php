@@ -60,7 +60,7 @@ class ArticleController extends AbstractFOSRestController
     }
 
     /**
-     * @Route("/articles", name="show_articles", methods={"GET"})
+     *@Rest\Get("/articles", name="show_articles")
      */
     public function showArticles(ArticleRepository $articleRepository, SerializerInterface $serializer)
     {
