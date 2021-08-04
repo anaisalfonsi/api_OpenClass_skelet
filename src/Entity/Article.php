@@ -4,9 +4,13 @@ namespace App\Entity;
 
 use App\Repository\ArticleRepository;
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation\ExclusionPolicy;
+use JMS\Serializer\Annotation\Expose;
 
 /**
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
+ *
+ * @ExclusionPolicy("all")
  */
 class Article
 {
@@ -14,21 +18,29 @@ class Article
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     *
+     * @Expose
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     * @Expose
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
+     *
+     * @Expose
      */
     private $content;
 
     /**
      * @ORM\ManyToOne(targetEntity=Author::class, inversedBy="articles", cascade={"all"}, fetch="EAGER")
+     *
+     * @Expose
      */
     private $author;
 

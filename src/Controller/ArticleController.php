@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Article;
+use App\Representation\Articles;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Request\ParamFetcherInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
@@ -94,6 +95,6 @@ class ArticleController extends AbstractFOSRestController
             $paramFetcher->get('offset')
         );
 
-        return $pager->getCurrentPageResults();
+        return new Articles($pager);
     }
 }
